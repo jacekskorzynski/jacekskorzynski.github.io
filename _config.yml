@@ -30,7 +30,7 @@ url: "https://jacekskorzynski.github.io" # the base hostname & protocol for your
 github_username:  jacekskorzynski
 
 # Build settings
-theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
