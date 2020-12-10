@@ -30,9 +30,11 @@ description: Automation, Linux and more...
 #github_username:  jacekskorzynski
 
 # Build settings
-theme: jekyll-theme-cayman  
+#theme: jekyll-theme-cayman  
+remote_theme: "mmistakes/minimal-mistakes@4.21.0"
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
