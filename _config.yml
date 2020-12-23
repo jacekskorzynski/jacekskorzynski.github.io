@@ -93,6 +93,7 @@ analytics:
 
 
 # Site Author
+author_profile:     false
 author:
   name             : "Jacek Skorzysnki"
   avatar           : "/jacek_skorzynski_bio.jpg"
