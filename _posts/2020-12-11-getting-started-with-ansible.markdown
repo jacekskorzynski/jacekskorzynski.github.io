@@ -2,7 +2,7 @@
 layout: single
 title:  "Getting Started with Ansible"
 date:   2020-12-11 00:26:07 +0100
-categories: ansible
+categories: ansible automation linux
 ---
 Ansible is a great technology to automate your IT infrastructure, helps with application development process and do many more.
 
@@ -25,34 +25,36 @@ Before you start there is a need to setup proper repositories.
 Ansible package is part of separate repository so you are not going to find it in default RHEL repos.
 That is why we need to attach is before installation will start.
 
-{% highlight bash %}
+```bash
 subscription-manager repos --enable ansible-2.9-for-rhel-8-x86_64-rpms
-{% endhighlight %}
+```
 
 And afret that just simple (RHEL 8 / CentOS 8 / Fedora):
 
-{% highlight bash %}
+```bash
 dnf install ansible
-{% endhighlight %}
+```
 
 or on RHEL 7 / CentOS 7
 
-{% highlight bash %}
+```bash
 yum install ansible
-{% endhighlight %}
+```
 
 Let's make sure everything works:
 
-{% highlight bash %}
+```bash
 ansible --version
+```
 
+```bash
 ansible 2.9.16
   config file = /etc/ansible/ansible.cfg
   configured module search path = ['/home/jskorzyn/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
   ansible python module location = /usr/lib/python3.9/site-packages/ansible
   executable location = /usr/bin/ansible
   python version = 3.9.1 (default, Dec  8 2020, 00:00:00) [GCC 10.2.1 20201125 (Red Hat 10.2.1-9)]
-{% endhighlight %}
+```
 
 That is basically it. You have your ansible and you are ready to go.
 
@@ -63,10 +65,10 @@ Ansible can be installed with `pip` Python package manager.
 To make it work you just need pip to be present on your system.
 If it is not there yet just follow procedure below:
 
-{% highlight bash %}
+```bash
 curl <https://bootstrap.pypa.io/get-pip.py> -o get-pip.py
 python get-pip.py --user
-{% endhighlight %}
+```
 
 Then run start command below:
 
@@ -74,7 +76,8 @@ Then run start command below:
 python -m pip install --user ansible
 ```
 
-**If you have Ansible 2.9 or older installed, you need to use `pip uninstall ansible` first to remove older versions of Ansible before re-installing it.**
+**Note:** If you have Ansible 2.9 or older installed, you need to use `pip uninstall ansible` first to remove older versions of Ansible before re-installing it.
+{: .note}
 
 You can find more examples in [Ansible Docs][ansible-docs]
 
@@ -85,9 +88,19 @@ Now when Ansible is ready we can start with simple configuration and finally run
 #### Inventory
 
 Inventory is basically a list of endpoints you want to automate.
-It can be an manual inventory (like static file) or dynamic.
-Today I would like to concentrateon static one.
+It can be either a manual inventory (like static file) or dynamic one.
+Here I would like to concentrate on static one.
 
 By default Ansible uses inventory comming form `/etc/ansible/hosts`
+
+First of all lets create a folder where we are going to place all neede files.
+
+```bash
+mkdir ./first-playbook
+cd ./first-playbook
+```
+
+
+
 
 [ansible-docs]: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
