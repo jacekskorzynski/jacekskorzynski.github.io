@@ -100,7 +100,4 @@ mkdir ./first-playbook
 cd ./first-playbook
 ```
 
-
-
-
 [ansible-docs]: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
