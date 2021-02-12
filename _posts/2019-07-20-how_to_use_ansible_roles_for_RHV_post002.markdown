@@ -76,7 +76,7 @@ Below you can find github link:
 
 [oVirt Ansible Roles][ovirt-roles]
 
-![oVirt Ansible Galaxy Roles](/assets/post02/galaxy01.png)
+![oVirt Ansible Galaxy Roles](/assets/post002/galaxy01.png)
 
 Currently there are available following Ansible roles:
 
